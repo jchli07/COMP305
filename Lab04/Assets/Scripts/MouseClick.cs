@@ -18,12 +18,7 @@ public class MouseClick : MonoBehaviour {
 
         if (Input.GetButtonDown("Fire1"))
         {
-            print(Input.mousePosition);
             Vector3 p = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f));
-            print(p);
-            print(p.x);
-            print(p.y);
-
             Instantiate(Bomb, new Vector3(p.x, p.y, 0.0f), Quaternion.identity);
         }
     }
